@@ -47,13 +47,6 @@
                     <img src="assets/images/husky.webp" alt="Husky dog breed">
                     <img src="assets/images/retriever.webp" alt="Retriever dog breed">
                 </div>
-                <!-- Answers content -->
-                <ol>
-                    <button type="button" class="btn btn-secondary">option A</button>
-                    <button type="button" class="btn btn-secondary">option B</button>
-                    <button type="button" class="btn btn-secondary">option C</button>
-                    <button type="button" class="btn btn-secondary">option D</button>
-                </ol>
                 <!-- Result content -->
                 <div id="result">
                     <span id="username-result"></span>,
@@ -63,17 +56,28 @@
             </div >
             <!-- Main inputs and buttons -->
             <div id="username">
-                <input type="text" id="name" name="name" class="btn username-input" placeholder="Your Name">
+                <input type="text" id="name" name="name" class="btn btn-warning" placeholder="Your Name">
             </div>
             <div id="start-quiz">
-                <button class="btn start-quiz">Srart Quiz!</button>
+                <button type="button" class="btn btn-warning">Srart Quiz!</button>
             </div>
-            <div class="answer-area"></div>
+             <!-- Answers content -->
+            <div class="answer-area">
+                <ol>
+                    <button type="button" class="btn btn-secondary">option A</button>
+                    <button type="button" class="btn btn-secondary">option B</button>
+                    <button type="button" class="btn btn-secondary">option C</button>
+                    <button type="button" class="btn btn-secondary">option D</button>
+                </ol>
+            </div>
+            <div id="next">
+                <button type="button" class="btn btn-warning">NEXT</button>
+            </div>
             <div id="play-again">
-                <button class="play-again-btn">Play Again</button>
+                <button type="button" class="btn btn-warning">Play Again</button>
             </div>
             <div id="exit">
-                <button class="exit-btn">“Exit”</button>
+                <button type="button" class="btn btn-warning"">EXIT</button>
             </div>
             <!-- Sound and score content -->
             <footer>
