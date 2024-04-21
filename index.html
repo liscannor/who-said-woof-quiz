@@ -3,11 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Add Font awesome -->
+   
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Who Said "WOOF"?</title>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <h1 id="title">Who Said “WOOF”?</h1>
+    </header>
+    <!-- Main content -->
+    <main>
+        <section id="game-section">
+            <div class="quiz-area">
+                <!-- Guidance -->
+                <div id="guidance">
+                    <h2 class="guidance-title">How to play:</h2>
+                    <ol class="guidance-list">
+                        <li>Enter your Name;</li>
+                        <li>Click “Start Quiz!”;</li>
+                        <li>You have to guess what breed of dog is in the picture;</li>
+                        <li>Select one answer;</li>
+                        <li>Click “Next Question”;</li>
+                        <li>“Exit” - stop play and return to home page.</li>
+                        
+                    </ol>
+                </div>
+                <!-- Question content -->
+                <div id="questions">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div >
+            <!-- Main inputs and buttons -->
+            <div id="username">
+                <input type="text" id="name" name="name" class="btn username-input" placeholder="Your Name">
+            </div>
+            <div id="start-quiz">
+                <button class="btn start-quiz">Srart Quiz!</button>
+            </div>
+            <div class="answer-area"></div>
+            <!-- Sound and score content -->
+            <footer>
+                <!-- Audio element -->
+                <div>
+                    <audio src="" controls >
+                    <p>Your browser doesn't support HTML5 audio .</p>
+                    </audio>
+                    <button id="mutebtn" aria-label="Mute Sound"><i class="fa-solid fa-volume-xmark"></i></button>
+                    <button id="playbtn" aria-label="Play Sound"><i class="fa-solid fa-volume-high"></i></button>
+                </div>
+                <div class="score-area"></div>
+            </footer>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/6e23a18528.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
