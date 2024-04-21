@@ -54,7 +54,7 @@
                     </p>
                 </div>
             </div >
-            <!-- Main inputs and buttons -->
+            <!-- User input and start button -->
             <div id="username">
                 <input type="text" id="name" name="name" class="btn btn-warning" placeholder="Your Name">
             </div>
@@ -70,6 +70,7 @@
                     <button type="button" class="btn btn-secondary">option D</button>
                 </ol>
             </div>
+            <!-- Next, Play Again and Exit buttons -->
             <div id="next">
                 <button type="button" class="btn btn-warning">NEXT</button>
             </div>
@@ -83,13 +84,15 @@
             <footer>
                 <!-- Audio element -->
                 <div>
-                    <audio src="" controls >
+                    <audio src="" controls muted>
                     <p>Your browser doesn't support HTML5 audio .</p>
                     </audio>
                     <button id="mutebtn" aria-label="Mute Sound"><i class="fa-solid fa-volume-xmark"></i></button>
                     <button id="playbtn" aria-label="Play Sound"><i class="fa-solid fa-volume-high"></i></button>
                 </div>
-                <div class="score-area"></div>
+                <div class="score-area">
+                    <p id="score-text">Score: <span id="score-digits">0</span>/10</p>
+                </div>
             </footer>
         </section>
     </main>
