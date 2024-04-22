@@ -58,6 +58,31 @@ header {
     max-width: 400px;
 }
 
+/* Quiz-area */
+
+#quiz-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+#questions {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid;
+}
+
+.answer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+}
 
 /* Footer */
 footer {
@@ -72,5 +97,15 @@ footer {
 
 #mutebtn, #playbtn {
     width: 80px;
+}
+
+@media screen and (min-width: 576px) {
+    /* Quiz-area */
+    .answer-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 400px;
+
+    }
 }
 
