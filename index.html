@@ -44,7 +44,7 @@
 
              <!-- Game screen -->
 
-            <div id="quiz-area" class="screen">
+            <div id="quiz-area" class="screen d-none">
                 <div id="questions" class="border-warning mw-400">
                     <img src="assets/images/corgi.webp" class="w-100" alt="Corgi dog breed">
                     <img src="assets/images/pit-bull.webp" class="w-100 d-none" alt="Pit Bull dog breed">
@@ -73,17 +73,14 @@
             </div>
 
             <!-- Result screen -->
-            <div id="result" class="screen d-none">
-                <span id="username-result"></span>,
-                <p id="text-result">YOUR QUIZ IS COMPLETE!</p>
-
-                <div id="play-again">
-                    <button type="button" class="btn btn-warning">Play Again</button>
-                </div>
-
-                <div id="exit">
-                    <button type="button" class="btn btn-warning">EXIT</button>
-                </div>
+            <div id="result" class="screen">
+                <div id="result-message">
+                    <span id="username-result" class="h4">User</span>,
+                    <h4 id="text-result">YOUR QUIZ IS COMPLETE!</h4>
+                    <h4 id="score-result">Your score: <span id="score-digits">0</span>/10</h4>
+                 </div>
+                <button type="button" class="btn btn-warning">Play Again</button>
+                <button type="button" class="btn btn-warning">EXIT</button>
             </div>
 
         </section>
