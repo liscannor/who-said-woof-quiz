@@ -12,90 +12,98 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Who Said "WOOF"?</title>
 </head>
-<body>
+
+<body class="container">
     <!-- Header -->
-    <header>
+    <header class="bg-warning">
         <h1 id="title">Who Said “WOOF”?</h1>
     </header>
+
     <!-- Main content -->
     <main>
         <section id="game-section">
-            <div class="quiz-area">
+            <!-- Welcome screen -->
+            <div id="start-quiz" class="screen">
                 <!-- Guidance -->
-                <div id="guidance">
-                    <h2 class="guidance-title">How to play:</h2>
-                    <ol class="guidance-list">
-                        <li>Enter your Name;</li>
-                        <li>Click “Start Quiz!”;</li>
-                        <li>You have to guess what breed of dog is in the picture;</li>
-                        <li>Select one answer;</li>
-                        <li>Click “Next Question”;</li>
-                        <li>“Exit” - stop play and return to home page.</li>
-                        
+                <div id="guidance" class="pt-3 pb-5">
+                    <h2 class="guidance-title h4 text-center">How to play:</h2>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Enter your Name;</li>
+                        <li class="list-group-item">Click “Start Quiz!”;</li>
+                        <li class="list-group-item">You have to guess what breed of dog is in the picture;</li>
+                        <li class="list-group-item">Select one answer;</li>
+                        <li class="list-group-item">Click “Next Question”;</li>
+                        <li class="list-group-item">“Exit” - stop play and return to home page.</li>
                     </ol>
                 </div>
-                <!-- Questions content -->
-                <div id="questions">
-                    <img src="assets/images/corgi.webp" alt="Corgi dog breed">
-                    <img src="assets/images/pit-bull.webp" alt="Pit Bull dog breed">
-                    <img src="assets/images/beagle.webp" alt="Beagle dog breed">
-                    <img src="assets/images/chow-chow.webp" alt="Chow Chow dog breed">
-                    <img src="assets/images/german-shepherd-dog.webp" alt="German shepherd dog breed">
-                    <img src="assets/images/spitz.webp" alt="Spitz dog breed">
-                    <img src="assets/images/boxer.webp" alt="Boxer dog breed">
-                    <img src="assets/images/bichon-frise.webp" alt="Bichon Frise dog breed">
-                    <img src="assets/images/husky.webp" alt="Husky dog breed">
-                    <img src="assets/images/retriever.webp" alt="Retriever dog breed">
-                </div>
-                <!-- Result content -->
-                <div id="result">
-                    <span id="username-result"></span>,
-                    <p id="text-result">YOUR QUIZ IS COMPLETE!
-                    </p>
-                </div>
-            </div >
-            <!-- User input and start button -->
-            <div id="username">
+
                 <input type="text" id="name" name="name" class="btn btn-warning" placeholder="Your Name">
-            </div>
-            <div id="start-quiz">
+        
                 <button type="button" class="btn btn-warning">Srart Quiz!</button>
             </div>
-             <!-- Answers content -->
-            <div class="answer-area">
-                <ol>
-                    <button type="button" class="btn btn-secondary">option A</button>
-                    <button type="button" class="btn btn-secondary">option B</button>
-                    <button type="button" class="btn btn-secondary">option C</button>
-                    <button type="button" class="btn btn-secondary">option D</button>
-                </ol>
-            </div>
-            <!-- Next, Play Again and Exit buttons -->
-            <div id="next">
-                <button type="button" class="btn btn-warning">NEXT</button>
-            </div>
-            <div id="play-again">
-                <button type="button" class="btn btn-warning">Play Again</button>
-            </div>
-            <div id="exit">
-                <button type="button" class="btn btn-warning"">EXIT</button>
-            </div>
-            <!-- Sound and score content -->
-            <footer>
-                <!-- Audio element -->
-                <div>
-                    <audio src="" controls muted>
-                    <p>Your browser doesn't support HTML5 audio .</p>
-                    </audio>
-                    <button id="mutebtn" aria-label="Mute Sound"><i class="fa-solid fa-volume-xmark"></i></button>
-                    <button id="playbtn" aria-label="Play Sound"><i class="fa-solid fa-volume-high"></i></button>
+
+            <!-- Result screen -->
+            <div id="result" class="screen d-none">
+                <span id="username-result"></span>,
+                <p id="text-result">YOUR QUIZ IS COMPLETE!</p>
+
+                <div id="play-again">
+                    <button type="button" class="btn btn-warning">Play Again</button>
                 </div>
-                <div class="score-area">
-                    <p id="score-text">Score: <span id="score-digits">0</span>/10</p>
+
+                <div id="exit">
+                    <button type="button" class="btn btn-warning">EXIT</button>
                 </div>
-            </footer>
+            </div>
+
+             <!-- Game screen -->
+
+            <div id="quiz-area" class="screen d-none">
+                <div id="questions">
+                    <img src="assets/images/corgi.webp" class="w-100" alt="Corgi dog breed">
+                    <img src="assets/images/pit-bull.webp" class="w-100" alt="Pit Bull dog breed">
+                    <img src="assets/images/beagle.webp" class="w-100" alt="Beagle dog breed">
+                    <img src="assets/images/chow-chow.webp" class="w-100" alt="Chow Chow dog breed">
+                    <img src="assets/images/german-shepherd-dog.webp" class="w-100" alt="German shepherd dog breed">
+                    <img src="assets/images/spitz.webp" class="w-100" alt="Spitz dog breed">
+                    <img src="assets/images/boxer.webp" class="w-100" alt="Boxer dog breed">
+                    <img src="assets/images/bichon-frise.webp" class="w-100" alt="Bichon Frise dog breed">
+                    <img src="assets/images/husky.webp" class="w-100" alt="Husky dog breed">
+                    <img src="assets/images/retriever.webp" class="w-100" alt="Retriever dog breed">
+                </div>
+
+                <div class="answer-area">
+                    <ol>
+                        <button type="button" class="btn btn-secondary">option A</button>
+                        <button type="button" class="btn btn-secondary">option B</button>
+                        <button type="button" class="btn btn-secondary">option C</button>
+                        <button type="button" class="btn btn-secondary">option D</button>
+                    </ol>
+                </div>
+
+                <div id="next">
+                    <button type="button" class="btn btn-warning">NEXT</button>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Sound and score content -->
+    <footer>
+        <!-- Audio element -->
+        <div>
+            <audio src="" muted>
+            <p>Your browser doesn't support HTML5 audio .</p>
+            </audio>
+            <button id="mutebtn" aria-label="Mute Sound" class="btn btn-warning"><i class="fa-solid fa-volume-xmark"></i></button>
+            <button id="playbtn" aria-label="Play Sound" class="d-none btn btn-warning"><i class="fa-solid fa-volume-high"></i></button>
+        </div>
+
+        <div class="score-area btn btn-warning">
+            Score: <span id="score-digits">0</span>/10
+        </div>
+    </footer>
+
     <!-- Add font awesome script -->
     <script src="https://kit.fontawesome.com/6e23a18528.js" crossorigin="anonymous"></script>
     <!-- Add  Bootstrap script -->
