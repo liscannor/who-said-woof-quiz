@@ -27,14 +27,50 @@ header {
     padding: 15px;
 }
    
+/* Welcome screen */
+#start-quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+#guidance {
+    padding-top: 15px;
+    padding-bottom: 45px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+}
+
+.name-input {
+    border: 2px solid rgba(255, 193, 7, 1);
+    padding: 10px;
+    width: 150px;
+    
+}
+        
+.mw-400 {
+    max-width: 400px;
+}
 
 
 /* Footer */
 footer {
     display: flex;
+    gap: 30px;
     padding: 15px, 0;
     justify-content: space-between;
     align-content: flex-end;
     margin-top: auto;
+    margin-bottom: 15px;
+}
+
+#mutebtn, #playbtn {
+    width: 80px;
 }
 
