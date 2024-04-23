@@ -60,6 +60,7 @@ let currentAnswer = null;
 let correctAnswers = 0;
 let playAudio = true;
 
+// Create array for random answers
 for (let question of questions) {
     answers.push(question.correctAnswer);
 }
@@ -149,7 +150,7 @@ function displayScore() {
 }
 
 function processAnswer() {
-    // validate selected ansver
+    // validate selected answer
     if (currentAnswer === questions[currentQuestion].correctAnswer) {
         correctAnswers++;
         audioSuccess.play();
