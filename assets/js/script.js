@@ -3,6 +3,12 @@ const startQuizBtn = document.getElementById('start-quiz-btn');
 const nextQuestionBtn = document.getElementById('next-btn');
 const exitBtn = document.getElementById('exit-btn');
 const playAgainBtn = document.getElementById('play-again-btn');
+const audioBtn = document.getElementById('volume-btn');
+const audioFail = new Audio("assets/sounds/fail.wav");
+const audioSuccess = new Audio("assets/sounds/success.wav");
+const audioStart = new Audio("assets/sounds/start.wav");
+const audioFinal = new Audio("assets/sounds/background.mp3");
+audioFinal.volume = 0.4;
 
 const questions = [
     {
@@ -52,10 +58,32 @@ let username = null;
 let currentQuestion = 0;
 let currentAnswer = null;
 let correctAnswers = 0;
+let playAudio = true;
 
-// Create array for random answers
 for (let question of questions) {
     answers.push(question.correctAnswer);
+}
+
+function toggleAudio() {
+    if (playAudio) {
+        playAudio = false;
+        audioBtn.children[0].classList.remove('fa-volume-high');
+        audioBtn.children[0].classList.add('fa-volume-xmark');
+    } else {
+        playAudio = true;
+        audioBtn.children[0].classList.remove('fa-volume-xmark');
+        audioBtn.children[0].classList.add('fa-volume-high');
+    }
+
+    audioFail.volume = playAudio ? 1 : 0;
+    audioSuccess.volume = playAudio ? 1 : 0;
+    audioStart.volume = playAudio ? 1 : 0;
+    audioFinal.volume = playAudio ? 0.4 : 0;
+}
+
+function stopFinalAudio() {
+    audioFinal.pause();
+    audioFinal.currentTime = 0;
 }
 
 function nextQuestion() {
@@ -74,6 +102,7 @@ function startQuiz() {
 
         // Log execution
         console.log('User name: ' + username);    
+        audioStart.play();
         showScreen('quiz-area');
     } else {
         alert('Please enter your name!');
@@ -81,6 +110,9 @@ function startQuiz() {
 }
 
 function resetQuiz() {
+    // reset final audio
+    stopFinalAudio();
+
     // reset values
     username = null;
     currentQuestion = 0;
@@ -98,7 +130,9 @@ function playAgain() {
     currentAnswer = null;
     correctAnswers = 0;
 
+    stopFinalAudio();
     displayScore(); 
+    audioStart.play();
     showScreen('quiz-area');
 }
 
@@ -115,11 +149,13 @@ function displayScore() {
 }
 
 function processAnswer() {
-    // validate selected answer
+    // validate selected ansver
     if (currentAnswer === questions[currentQuestion].correctAnswer) {
         correctAnswers++;
+        audioSuccess.play();
         console.log('Its correct answer');
     } else {
+        audioFail.play();
         console.log('Its wrong answer');
     }
 
@@ -127,6 +163,7 @@ function processAnswer() {
 
     if (currentQuestion === questions.length - 1) {
         showScreen('result');
+        audioFinal.play();
         return;
     }
 
