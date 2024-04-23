@@ -1,39 +1,118 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Who said "WOOF"?
 
-Welcome,
+Visit the deployed site: [Who said "WOOF"?](https://liscannor.github.io/who-said-woof-quiz/)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Goal for this Project
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Welcome to the Who said "WOOF" Quiz website. The goal of the project is to check knowledge how well you know the breeds of dogs, get fun and interactive quiz with images, audio and visual effects to online users.  
 
-## Codeanywhere Reminders
+![Responsive Displays](assets/documentation/Who-said-WOOF.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## CONTENTS
 
-`python3 -m http.server`
+- [Masters Golf Quiz](#masters-golf-quiz)
+- [Goal for this Project](#goal-for-this-project)
+- [Table of Contents](#table-of-contents)
+- [UX](#ux)
+  - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+    - [Colours](#colours)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+    - [Features](#features)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+    ## UX
 
-`http_server`
+## User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* As a user, I want the quiz to be responsive to my devices.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* As a user, I want clear instructions how to play quiz.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* As a user, I want to easily navigate through quiz.
 
-To log into the Heroku toolbelt CLI:
+* As a user, I want to know my score during quiz.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* As a user,  I want to know my final score with some feedback.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* As a user,  I want to have music on the site.
 
----
+* As a user,  I want to nhave ability to switch music on and of.
 
-Happy coding!
+* As a user,  I want positive feedback after the game is over.
+
+- - - 
+
+## Design
+
+### Fonts
+
+I have used [Google Fonts](https://fonts.google.com/ "Google Fonts") to find a text that best suits the feel of the website. For the main text I have chosen [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview=&query=ubuntu) as I feel it is has a understandable, simple and easy to read look.
+
+### Icons
+
+I have used icons for my website from the [Font Awesome library](https://fontawesome.com/ "Font Awesome"). These iclude the icons to give the user the option to mute and unmute the quiz sounds. 
+
+### Colours
+
+I have used this colour scheme: 
+![Colour Pallet](assets/documentation/woof-coolors.png)
+
+### Imagery
+
+As the website is called Who said "WOOF", I wanted to use an image for the page background that was associated with the theme of dogs.
+
+### Wireframes
+
+Wireframes were created for mobile and desktop screens using figma.
+
+![Mobile screen](assets/documentation/mobile-frame.png)
+![Desktop screen](assets/documentation/desktop-frame.png)
+
+### Features
+
+This website is SPA (Single Page Application)  that includes: welcome screen, game screen and result screens.
+
+All screens on the website are responsive. Page has a favicon in the browser and the title of the site at the top of pagetab.
+
+  ![favicon](assets/documentation/favicon.png)
+
+  #### The Welcome screen 
+
+  ![screenshot of welcome screen](assets/documentation/welcome-scr.png)  
+   
+   The Welcome screen represent a box with game instructions, an input for entering a username, a "strat quiz" button, a box with user's score and a button for on/off music.
+
+  #### The Game screen 
+
+  ![screenshot of game screen](assets/documentation/game-scr.png) 
+
+  The Game screen represent: image - questions, the box with answers, a "next" button, the box with user's score and the button for on/off music.
+
+  #### The Result screen 
+
+  ![screenshot of result screen](assets/documentation/result-scr.png) 
+
+  The Result screen represent: the result box with user's name and score, a "Play Again" button, an "Exit" button, the box with user's score and the button for on/off music.
+
+  #### Future Implementations
+
+  In future implementations I would like to: 
+  - allow the user to go through different levels of difficulty.
+  - consider not only the number of correct answers, but also the speed at which the user completes the quiz.
+
+- - -
+
+## Testing
+
+
+### Solved Bugs
+
+| No | Bug | How I solved the issue |
+| :--- | :--- | :--- |
+| 1 | Answers duplication for questions | Correct answer for question removed from list of possible answers before picking 3 wrong answersdesktopd. |
+| 2 | "undefined" in one of the answer for second question | Answers array was not properly cloned from possible answers array, so when current answer was removed it was reduced original array and in the end there was no available answers in the array. Solved with proper array cloning. |
+
