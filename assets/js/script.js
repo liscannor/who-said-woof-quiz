@@ -235,7 +235,7 @@ function showScreen(screenId)
     // Hide all screens
     for (let screen of document.getElementsByClassName('screen')) {
         if (!screen.classList.contains("d-none")) {
-            screen.classList.add("d-none")
+            screen.classList.add("d-none");
         }
     }
 

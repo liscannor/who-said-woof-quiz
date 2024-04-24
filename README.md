@@ -20,11 +20,18 @@ Welcome to the Who said "WOOF" Quiz website. The goal of the project is to check
     - [Icons](#icons)
     - [Colours](#colours)
     - [Imagery](#imagery)
+    - [Sounds](#sounds)
     - [Wireframes](#wireframes)
     - [Features](#features)
+- [Technologies used](#technologies-used)
+    - [Languages](#languages)
+    - [Tools](#tools)
+- [Deployment](#deployment)
+    - [Fork](#fork)
+    - [Clone](#clone)
 
 
-    ## UX
+## UX
 
 ## User Stories
 
@@ -64,6 +71,15 @@ I have used this colour scheme:
 ### Imagery
 
 As the website is called Who said "WOOF", I wanted to use an image for the page background that was associated with the theme of dogs.
+
+### Sounds
+
+There is musical accompaniment through the gameplay:
+- start quiz - a short sound
+- correct answer - a short greeting sound
+- uncorrect answer - a short sound of failure
+- complete quiz - a song "Who let the dog out"
+
 
 ### Wireframes
 
@@ -105,6 +121,70 @@ All screens on the website are responsive. Page has a favicon in the browser and
   - consider not only the number of correct answers, but also the speed at which the user completes the quiz.
 
 - - -
+
+## Technologies Used
+
+### Languages Used
+
+HTML, CSS, Javascript
+
+### Frameworks, Libraries & Programs Used
+
+- Figma - used to produce wireframes  
+- GitHub - used to save and store all files for this website  
+- Git - used for version control
+- GitPod - IDE used to create the site
+- VS (Visual Studio Code) - IDE used to create the site
+- Google Fonts - fonts were imported from here 
+- Font Awesome - used for sound's icons
+- Favicon.io - for badger favicon  
+- Online Cloudconvert - to convert mp3 files
+- Google Dev Tools - to debug and for testing responsiveness 
+- Google Lighthouse - for auditing the website
+- W3C Validator - for validating the HTML and CSS code 
+- JSHint - for validating JavaScript
+- Am I Responsive? - To show the website image on a range of devices
+- Mixkit - soundes for website were imported from here 
+- Bootstrap - for add styles to butttons
+
+ - - - 
+
+## Deployment
+
+### Deployment
+
+The project was deployed using GitHub by the following steps:
+
+- Navigate to the repository on github and click "Settings".
+- Then select "Pages" on the side navigation.
+- In build and deployment select the "main branch".
+- Select the "/(root)" folder.
+- Click on the "Save" button.
+- Website is now live at  `https://liscannor.github.io/who-said-woof-quiz/`. 
+- If changes are made, commited and pushed to GitHub, the website will be updated.
+
+### Fork
+
+To make a copy of a repository or to fork it using Github follow below steps:
+
+- Go to "Github repository" to be copied.
+- Click on the "Fork" button in upper right corner of page to copy.
+
+### Clone
+
+To copy the repository to your local machine in Github follow steps below:
+
+- Go to "Github repository" to be cloned.
+- Click on the "Code" button above the list of files.
+- Select to clone using either  "HTTPS", "SSH", or "Github CLI" and click the "copy" button to copy the URL to clipboard.
+- Open "Git Bash".
+- Change the current working directory to the one where you want the cloned directory.
+- Type "git clone" and paste the URL from the clipboard. 
+- Press "Enter" to create your local clone.
+
+
+
+- - - 
 
 ## Testing
 
