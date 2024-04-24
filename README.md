@@ -228,7 +228,7 @@ Full testing was performed on the following devices:
 - Welcome screen Features
 
 | Feature | Testing Performed | Expected Outcome| Outcome |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Name Input field | Enter the user name | Name appears in box when typed | Pass |
 | Start Quiz button|Moved mouse over button and clicked | If name has been entered and audio not muted a melody plays and the quiz area is dispalyed | Pass |
 | Mute button | Moved mouse and clicked | Cursor changes to pointer and the muted icon appears | Pass |
@@ -236,15 +236,15 @@ Full testing was performed on the following devices:
 - Game screen Features
 
 | Feature | Testing Performed | Expected Outcome| Outcome |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | 
 | Answers buttons | Click on the button | When click on the answer button, it changes colour to yellow and the correct audio is played. The score increases by one. If incorrect answer is clicked, the incorect audio is played | Passs |
 | Next button | Moved mouse over and clicked | Next question and options are displayed | Pass |
 
 - Result screen Features 
 
  Feature | Testing Performed | Expected Outcome| Outcome |
-| --- | --- | --- | --- | --- |
-| Play Again button | Moved mouse over button and clicked. | The user is brought back to the Game page when clicked | Pass |
+| :--- | :--- | :--- | :--- |
+| Play Again button | Moved mouse over button and clicked | The user is brought back to the Game page when clicked | Pass |
 | Exit button | Moved mouse over button and clicked. | The user is brought back to the Welcome page when clicked | Pass |
 
 ### User Stories Testing
